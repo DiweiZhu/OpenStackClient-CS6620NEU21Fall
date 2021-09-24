@@ -11,7 +11,7 @@ See:
 
 ## 1.   Vision and Goals Of The Project:
 
-The unified OpenStack client, openstackclient or "OSC", aims to provide a single entrypoint to interact with all OpenStack services from the command line, masking differences in the underlying APIs and terminologies. In the past, each service offered their own individual project-specific client as an entrypoint for each service. This client is intended to replace the project-specific clients used so far, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
+openstackclient is intended to replace the project-specific clients used in the past, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
 
 High-level goals of this project include:
 
@@ -33,26 +33,29 @@ Achieving feature-parity between project-specific clients and the unified CLI to
 
 ## 3.   Scope and Features Of The Project:
 
+* Migrate block storage (cinder) commands in OpenStackClient to OpenStackSDK to resolve problem of cinderclient v2 support drop
+	* Commands are listed in https://github.com/openstack/python-openstackclient/blob/master/doc/source/cli/data/cinder.csv
+	* Block storage operations can be found here https://opendev.org/openstack/python-openstackclient/src/branch/master/openstackclient/volume
+	* These commands should be properly grouped and treated as groups
+	* Commands using cinderclient methods should be modified to using OpenStackSDK methods
+	* As commands will use OpenStackSDK, they will not rely on v2 APIs anymore
 
-* There are a handful of commands and options that exist in the project-specific clients but not in openstackclient. There are a lot of commands already identified by the OpenStack team and have already been transitioned to openstackclient. There are only a few remaining gaps left. The first of those remaining gaps is between novaclient and openstackclient. Once this gap has been closed, the Nova team can consider deprecation process for the novaclient.
-* An equally important task is to migrate openstackclient from using project-specific client libraries to using openstacksdk. Block storage commands in openstackclient need to be migrated to openstacksdk instead of using cinderclient in openstackclient. This is to resolve the problem of cinderclient dropping super for v2. This item is causing a big user impact right now.
+* Finish gap closing between OpenStackClient and nova client
+	* All nova commands already exist in OpenStackClient
+	* Need to go through those commands to check if the syntax of them makes sense, and if they have the desired functions
+	* For those which do not perform as desired, modify corresponding code, either using nova client methods or migrating to OpenStackSDK
+	* For those which are not using OpenStackSDK, switch them to using OpenStackSDK.
+
+It is hard to tell how much time we need to accomplish both of these tasks, for which the main reason is we are not familiar with the code base. Based on the estimation of our mentors, we might only be able to finish one of these tasks. As the first one is actually more difficult than the second one, we might set the goal to finish the second one first, and treat the first one (cinder one) as our stretch goal. It is a reasonable choice to us, because we are actually working with individual commands (or groups of them), so it is acceptable if we just complete part of them.
 
 
 ** **
 
 ## 4. Solution Concept
 
-OpenStack provides multiple services as the six core services:
-* Nova (compute)
-* Neutron (networking)
-* Cinder (block storage)
-* Glance (image storage)
-* Keystone (identity)
-* Placement (inventory)
-
-As most services are managed by different teams, they have slightly different APIs, and different "clients" for interacting with the APIs. 
-
 ![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/OpenStackClient.png)
+
+OpenStack is a set of components, both services and libraries. OpenStack provides multiple services, including nova (compute), neutron (networking), cinder (block storage), glance (image storage), keystone (identity), and placement (inventory), as the six core services. As most services are managed by different teams, they have slightly different APIs, and different "clients" for interacting with the APIs. 
 
 Each client consists of a command line interface (CLI) and a library. If a user wants to use multiple services, they need to separately deal with multiple CLIs and libraries, with inconsistent styles, leading to bad user experiences.
 
@@ -74,18 +77,35 @@ The second goal is to identify commands and options that exist in the project-sp
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
 
+Sprint
+Task
+1
+Week 1
+Introductions
+Project Description
 
-Sprint | Tasks
-:------: | ------
-1 | Week 1: <br><ul><li>Introductions</li><li>Project Description</li></ul><br> Week 2: <br><ul><li>Setup: <br><ul><li>Create accounts for IRC and Gerrit</li><li>Set up a Linux-based development environment</li><li>Set up an all-in-one OpenStack deployment that you can use for testing</li></ul><br></li></ul>
-2 | Week 3: <br><ul><li>Continue with OpenStack setup</li></ul><br>
-3 |
-4 |
-5 |
+Week 2
+Setup:
+Create accounts for IRC and Gerrit
+Set up a Linux-based development environment
+Set up an all-in-one OpenStack deployment that you can use for testing
+2
+Week 3
+Continue with Setup
+3
+Week 4
+  Deliver Goal 1
+4
+Week 7
+  Deliver Goal 2
+5
+Week 9
+  Deliver Goal 3
 
 
-#### Open Items: 
-* Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
+
+Open Items: 
+Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
 
 
 
