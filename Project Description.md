@@ -94,10 +94,6 @@ Sprint | Tasks
 4 |
 5 |
 
-
-### Open Items: 
-* Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
-
 ### Mentors:
 * Artem Goncharov <artem.goncharov@gmail.com>
 * Stephen Finucane <stephenfin@redhat.com>
