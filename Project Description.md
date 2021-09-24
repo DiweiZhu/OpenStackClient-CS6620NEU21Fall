@@ -88,11 +88,10 @@ Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclie
 
 Sprint | Tasks
 :------: | ------
-1 | <br><ul><li>Setup the OpenStackClient environment on the Cloud VM</li></ul><br>
-2 | <br><ul>The next step is to go through the source code and get familiarity with the functionality of Nova client service. This is crucial in     understanding the gaps and figure out how to migrate the remaining commands that still use native Nova API’s and libraries and migrate them to OpenStackSDK. To completely understand the OpenStackClient functionality we need to execute basic set of commands like create and modify Cloud enviromnents</ul><br>
-3 |<br><ul>Now we are going to focus on bringing the commands that were missing in OpenStackSDK for Nova client. This is done by adding the proxy classes/methods in the OpenStackSDK for Nova. After this it is critical to run a proper testing suite to make sure there is no impact to the system</ul><br>
-4 |<br><ul><li>The next task is to fix the gaps in commands that are already in the OpenStackSDK</li></ul><br>
-5 |
+1 | Setup the OpenStackClient environment on the Cloud VM: <br><ul><li>Create accounts for IRC and Gerrit</li><li>Set up a Linux-based development environment</li><li>Set up an all-in-one OpenStack deployment that you can use for testing</li></ul><br></li></ul>
+2 | The next step is to go through the source code and get familiarity with the functionality of Nova client service. This is crucial in understanding the gaps and figure out how to migrate the remaining commands that still use native Nova API’s and libraries and migrate them to OpenStackSDK. To completely understand the OpenStackClient functionality we need to execute basic set of commands like create and modify Cloud enviromnents
+3 |Now we are going to focus on bringing the commands that were missing in OpenStackSDK for Nova client. This is done by adding the proxy classes/methods in the OpenStackSDK for Nova. After this it is critical to run a proper testing suite to make sure there is no impact to the system
+4 |The next task is to fix the gaps in commands that are already in the OpenStackSDK
 
 ### Mentors:
 * Artem Goncharov <artem.goncharov@gmail.com>
