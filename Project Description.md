@@ -53,9 +53,17 @@ It is hard to tell how much time we need to accomplish both of these tasks, for 
 
 ## 4. Solution Concept
 
-![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/OpenStackClient.png)
+OpenStack provides multiple services as the six core services:
+* Nova (compute)
+* Neutron (networking)
+* Cinder (block storage)
+* Glance (image storage)
+* Keystone (identity)
+* Placement (inventory)
 
-OpenStack is a set of components, both services and libraries. OpenStack provides multiple services, including nova (compute), neutron (networking), cinder (block storage), glance (image storage), keystone (identity), and placement (inventory), as the six core services. As most services are managed by different teams, they have slightly different APIs, and different "clients" for interacting with the APIs. 
+As most services are managed by different teams, they have slightly different APIs, and different "clients" for interacting with the APIs.
+
+![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/OpenStackClient.png)
 
 Each client consists of a command line interface (CLI) and a library. If a user wants to use multiple services, they need to separately deal with multiple CLIs and libraries, with inconsistent styles, leading to bad user experiences.
 
@@ -77,35 +85,17 @@ The second goal is to identify commands and options that exist in the project-sp
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
 
-Sprint
-Task
-1
-Week 1
-Introductions
-Project Description
-
-Week 2
-Setup:
-Create accounts for IRC and Gerrit
-Set up a Linux-based development environment
-Set up an all-in-one OpenStack deployment that you can use for testing
-2
-Week 3
-Continue with Setup
-3
-Week 4
-  Deliver Goal 1
-4
-Week 7
-  Deliver Goal 2
-5
-Week 9
-  Deliver Goal 3
+Sprint | Tasks
+:------: | ------
+1 | Week 1: <br><ul><li>Introductions</li><li>Project Description</li></ul><br> Week 2: <br><ul><li>Setup: <br><ul><li>Create accounts for IRC and Gerrit</li><li>Set up a Linux-based development environment</li><li>Set up an all-in-one OpenStack deployment that you can use for testing</li></ul><br></li></ul>
+2 | Week 3: <br><ul><li>Continue with OpenStack setup</li></ul><br>
+3 |
+4 |
+5 |
 
 
-
-Open Items: 
-Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
+#### Open Items: 
+* Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
 
 
 
