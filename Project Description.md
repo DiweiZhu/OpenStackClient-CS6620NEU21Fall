@@ -11,7 +11,7 @@ See:
 
 ## 1.   Vision and Goals Of The Project:
 
-openstackclient is intended to replace the project-specific clients used in the past, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
+The unified OpenStack client, openstackclient or "OSC", aims to provide a single entrypoint to interact with all OpenStack services from the command line, masking differences in the underlying APIs and terminologies. In the past, each service offered their own individual project-specific client as an entrypoint for each service. This client is intended to replace the project-specific clients used so far, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
 
 High-level goals of this project include:
 
@@ -34,18 +34,8 @@ Achieving feature-parity between project-specific clients and the unified CLI to
 ## 3.   Scope and Features Of The Project:
 
 
-1. identify commands and options that exist in the project-specific clients but not in openstackclient. project-specific clients include:
-	a. novaclient
-	b. neutronclient
-	c. cinderclient
-	d. glanceclient
-	e. keystoneclient
-2. add the missing commands to openstackclient.
-3. migrate openstackclient from using project-specific client libraries to using openstacksdk.
-
-1 and 2 are being conducted for some time, so there might not be many remaining gaps.
-While 3 is only underway for a number of nova commands.
-
+* There are a handful of commands and options that exist in the project-specific clients but not in openstackclient. There are a lot of commands already identified by the OpenStack team and have already been transitioned to openstackclient. There are only a few remaining gaps left. The first of those remaining gaps is between novaclient and openstackclient. Once this gap has been closed, the Nova team can consider deprecation process for the novaclient.
+* An equally important task is to migrate openstackclient from using project-specific client libraries to using openstacksdk. Block storage commands in openstackclient need to be migrated to openstacksdk instead of using cinderclient in openstackclient. This is to resolve the problem of cinderclient dropping super for v2. This item is causing a big user impact right now.
 
 
 ** **
