@@ -85,7 +85,7 @@ Sprint | Tasks
 
 
 #### Open Items: 
-Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
+* Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
 
 
 
