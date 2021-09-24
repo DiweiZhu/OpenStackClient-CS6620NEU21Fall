@@ -84,35 +84,7 @@ Sprint | Tasks
 5 |
 
 
-
-Sprint
-Task
-1
-Week 1
-Introductions
-Project Description
-
-Week 2
-Setup:
-Create accounts for IRC and Gerrit
-Set up a Linux-based development environment
-Set up an all-in-one OpenStack deployment that you can use for testing
-2
-Week 3
-Continue with Setup
-3
-Week 4
-  Deliver Goal 1
-4
-Week 7
-  Deliver Goal 2
-5
-Week 9
-  Deliver Goal 3
-
-
-
-Open Items: 
+#### Open Items: 
 Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
 
 
