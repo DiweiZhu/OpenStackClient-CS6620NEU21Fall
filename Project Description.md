@@ -75,7 +75,12 @@ The second goal is to identify commands and options that exist in the project-sp
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
 
 Sprint | Tasks
-------------- | -------------
+------ | ------
+1 |
+2 |
+3 |
+4 |
+5 |
 
 
 Sprint
