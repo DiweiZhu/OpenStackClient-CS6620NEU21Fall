@@ -52,6 +52,8 @@ While 3 is only underway for a number of nova commands.
 
 ## 4. Solution Concept
 
+![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/OpenStackClient.png)
+
 OpenStack is a set of components, both services and libraries. OpenStack provides multiple services, including nova (compute), neutron (networking), cinder (block storage), glance (image storage), keystone (identity), and placement (inventory), as the six core services. As most services are managed by different teams, they have slightly different APIs, and different "clients" for interacting with the APIs. 
 
 Each client consists of a command line interface (CLI) and a library. If a user wants to use multiple services, they need to separately deal with multiple CLIs and libraries, with inconsistent styles, leading to bad user experiences.
