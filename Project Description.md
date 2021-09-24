@@ -78,7 +78,7 @@ Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclie
 Sprint | Tasks
 :------: | ------
 1 | Week 1: <br><ul><li>Introductions</li><li>Project Description</li></ul><br> Week 2: <br><ul><li>Setup: <br><ul><li>Create accounts for IRC and Gerrit</li><li>Set up a Linux-based development environment</li><li>Set up an all-in-one OpenStack deployment that you can use for testing</li></ul><br></li></ul>
-2 |
+2 | Week 3: <br><ul><li>Continue with OpenStack setup</li></ul><br>
 3 |
 4 |
 5 |
