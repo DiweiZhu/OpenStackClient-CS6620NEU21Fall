@@ -1,4 +1,4 @@
-# OpenStackClient-CS6620NEU21Fall
+# OpenStackClient
 ** **
 
 # Integrate and plug Cinder functionalities into OpenStackClient Core
