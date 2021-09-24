@@ -77,6 +77,7 @@ The designs for that purpose is:
 
 
 ## 5. Acceptance criteria
+
 There are two major tasks that are envisioned as an end goal for our project:
 OpenStack’s task to transition all project-specific clients to openstackclient has already had significant progress prior to starting our project. Some clients have already been replaced. Our aim is to migrate the client for Cinder(Block Storage service) - cinderclient    to openstacksdk.
 The second goal is to identify commands and options that exist in the project-specific clients but not openstackclient and then add these missing commands to openstackclient.
@@ -94,8 +95,11 @@ Sprint | Tasks
 5 |
 
 
-#### Open Items: 
+### Open Items: 
 * Does openstacksdk have all methods (or similar ones) that the project-specific clients support?
 
-
+### Mentors:
+* Artem Goncharov <artem.goncharov@gmail.com>
+* Stephen Finucane <stephenfin@redhat.com>
+* Kendall Nelson <kennelson11@gmail.com>
 
