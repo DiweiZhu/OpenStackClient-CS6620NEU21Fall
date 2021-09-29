@@ -5,7 +5,7 @@
 
 OpenStack is an open-source platform that allows you to create private and public clouds. openstackclient is the unified client for interacting with OpenStack-based clouds. It is a Python-based client that supports most OpenStack services, including the Compute (nova) service, Networking (neutron) service, and Block Storage (cinder) service. It also provides a plugin architecture to allow users to extend commands or add support for non-core services. The unified OpenStack client is intended to replace a large number of project-specific clients.
 See:
-* [openstackclient](https://docs.openstack.org/python-openstackclient/latest/)
+* [Openstackclient](https://docs.openstack.org/python-openstackclient/latest/)
 * [OpenStack Services](https://www.openstack.org/software/project-navigator/openstack-components#openstack-services)
 
 
