@@ -2,7 +2,7 @@
 # OpenStackClient
 ** **
 
-# Integrate and plug Cinder functionalities into OpenStackClient Core
+# Integrate and plug Cinder functionalities into OpenStackClient Core [need refine]
 
 OpenStack is an open-source platform that allows you to create private and public clouds. openstackclient is the unified client for interacting with OpenStack-based clouds. It is a Python-based client that supports most OpenStack services, including the Compute (nova) service, Networking (neutron) service, and Block Storage (cinder) service. It also provides a plugin architecture to allow users to extend commands or add support for non-core services. The unified OpenStack client is intended to replace a large number of project-specific clients.
 See:
@@ -10,7 +10,7 @@ See:
 * [OpenStack Services](https://www.openstack.org/software/project-navigator/openstack-components#openstack-services)
 
 
-## 1.   Vision and Goals Of The Project:
+## 1.   Vision and Goals Of The Project: [need refine]
 
 openstackclient is intended to replace the project-specific clients used in the past, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
 
@@ -30,7 +30,7 @@ OpenStack is used by large enterprises, governments, and startups to build publi
 
 ** **
 
-## 3.   Scope and Features Of The Project:
+## 3.   Scope and Features Of The Project:  [need refine]
 
 * There are a handful of commands and options that exist in the project-specific clients but not in openstackclient. There are a lot of commands already identified by the OpenStack team and have already been transitioned to openstackclient. There are a few gaps left. The first of those remaining gaps is within novaclient and openstackclient. Once these gaps have been closed, the Nova team can consider deprecating novaclient.
 	* All nova commands already exist in OpenStackClient.
@@ -49,7 +49,7 @@ It may be a challenge anticipating how long our tasks may take given the stringe
 
 ** **
 
-## 4. Solution Concept
+## 4. Solution Concept [need refine]
 
 OpenStack provides multiple services:
 * Nova (compute)
@@ -74,11 +74,19 @@ The design for that purpose is:
 2. Migrate OpenstackClient from using client-specific libraries to using OpenStackSDK.
 
 
-## 5. Acceptance criteria
+## 5. Acceptance criteria [need refine]
 
 Two major tasks are envisioned as an end goal for our project: OpenStack’s task to transition all project-specific clients to openstackclient has already had significant progress prior to starting our project. Some clients have already been replaced. Our aim is to migrate the client for Cinder(Block Storage service) - cinderclient to openstacksdk. The second goal is to identify commands and options that exist in the project-specific clients but not openstackclient and then add these missing commands to openstackclient.
 
-## 6.  Release Planning:
+## 6. Accomplishment
+
+## 7. What Learned
+
+## 8. Main Obstacles
+
+## 9. Future Work
+
+## 10. Release Planning: [need refine]
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
 
