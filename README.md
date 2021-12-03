@@ -86,7 +86,7 @@ Two major tasks are envisioned as an end goal for our project: OpenStack’s tas
 
 ## 9. Future Work
 
-## 10. Release Planning: [need refine]
+## 10. Release Notes: [need refine]
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
 
