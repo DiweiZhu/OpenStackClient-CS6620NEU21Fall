@@ -86,6 +86,7 @@ Two major tasks are envisioned as an end goal for our project: OpenStack’s tas
 
 ## 9. Future Work
 
+During the entirity of our work for OpenStackClient we were faced with some challenging situations and their resolution depended on implementing new changes in the OpenStackSDK before we could migrate some commands. As discussed in the obstacles <>
 ## 10. Release Notes: [need refine]
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
