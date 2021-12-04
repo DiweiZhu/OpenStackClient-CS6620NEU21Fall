@@ -136,7 +136,70 @@ In some special cases OpenStackSDK might does not provide full support for a com
 - Fix bug in class definition of ServerDiagnostics
 - Add \_max_microverion into ServerDiagnostics so that it calls new version of API by default.
 
-## 7. What Learned
+## 7. What We Learned
+
+# What is OpenStack?
+We learned that OpenStack is a set of software components that provide common services for cloud infrastructure. It contains several components providing APIs to access key infrastructure resources. With OpenStack we can set up your own private cloud, using our very own bare-metal servers and it is entirely API driven, suited for a containerized world.
+
+# OpenStack Philosophy, Guiding Principles, and Organisation
+
+The Four Opens are a set of principles guidelines that were created by the OpenStack community as a way to guarantee that the users get all the benefits associated with open source software, including the ability to engage with the community and influence the future evolution of the software. Under these guidelines, the OpenStack community grew from tens of contributors to thousands, creating one of the top three most active open source projects in the world behind the Linux Kernel and Chromium. The Four Opens were instrumental not only in this success but also in building a thriving, global community.
+
+OpenStack also has a set of guiding principles that are used to inform and shape decisions. These principles are not aspirational. Rather, they form the bedrock upon which the OpenStack community and software are built.
+
+We learned about how OpenStack is structured as an organization that is governed by two separate governance bodies, formally defined in the OpenStack Foundation bylaws: the Board of Directors and the Technical Committee. It also comprises project teams and SIGs.
+
+# What is OpenStackSDK?
+We learned that OpenStack SDK is a client library for building applications to work with OpenStack clouds. The project aims to provide a consistent and complete set of interactions with OpenStack's many services, along with complete documentation, examples, and tools.
+
+# IRC
+We learned that IRC, or Internet Relay Chat, is often used as a real-time communication capability with open source projects. We got set up on IRC and joined relevant channels and explored useful commands to use IRC to connect with our mentors and the OpenStack community.
+Main channels are:
+* #openstack (for usage questions)
+* #openstack-dev (for development questions)
+* #openstack-infra (for questions about the project infrastructure)
+* #openstack-upstream-institute (for beginners in the OpenStack land)
+
+# Using Gerrit with Git
+Gerrit is the code review system used by the OpenStack project. We learned about the development and code review workflows for projects hosted on the OpenDev infrastructure. OpenDev has a sandbox repository for learning and testing purposes: https://opendev.org/opendev/sandbox. This was a great repository to begin our OpenDev learning. We experimented with the workflow and tried different options to learn what they do.
+
+# DevStack
+DevStack is a series of extensible scripts used to quickly bring up a complete OpenStack environment based on the latest versions of everything from git master. It is used interactively as a development environment and as the basis for much of the OpenStack project’s functional testing. We set up our own DevStack instance for the team on one of MOC's VMs and exposed it to our individual dev instances to test our code against DevStack. We learned about clouds.yaml configuration to have all our dev instances talk to DevStack.
+
+# Agile development and Taiga
+We learned about agility in software development, SCRUM, and its benefits. Working in sprints and regularly sharing our progress with the class has helped us practice agile development and understand its value. Using Taiga helped us stay accountable and track our progress against our goals. Planning sprints, estimating story points, and reviewing burndown charts were useful exercises to get a glimpse of how the software industry works today.
+
+# Tox
+We learned about standardized testing in Python using tox. tox aims to automate and standardize testing in Python. It is part of a larger vision of easing the packaging, testing, and release process of Python software. tox is a generic virtualenv management and test command-line tool you can use for:
+
+* Checking that your package installs correctly with different Python versions and interpreters
+* Running your tests in each of the environments, configuring your test tool of choice
+* Acting as a frontend to Continuous Integration servers, greatly reducing boilerplate and merging CI and shell-based testing.
+
+# API Microversioning
+We learned about the API Microversions framework in OpenStack used to allow changes to the API while preserving backward compatibility. The basic idea is that a user has to explicitly ask for their request to be treated with a particular version of the API. So breaking changes can be added to the API without breaking users who don’t specifically ask for it. This is done with an HTTP header OpenStack-API-Version which is a monotonically increasing semantic version number starting from 3.0.
+
+# Zuul and Project Gating
+Zuul is a program that drives continuous integration, delivery, and deployment systems with a focus on project gating and interrelated projects.
+* Zuul’s configuration is organized around the concept of a pipeline. In Zuul, a pipeline encompasses a workflow process that can be applied to one or more projects.
+* Pipelines have associated triggers which are descriptions of events that should cause something to be enqueued into a pipeline.
+* Once all of the jobs for an item in a pipeline have been run, the pipeline’s reporters are responsible for reporting the results of all of the jobs.
+
+The process of project gating attempts to prevent changes that introduce regressions from being merged. This keeps the mainline of development open and working for all developers, and only when a change is confirmed to work without disruption is it merged. Zuul can help automate this process, with a particular emphasis on ensuring large numbers of changes are tested correctly.
+> Why Zuul replaced Jenkins: https://superuser.openstack.org/articles/introducing-zuul-for-improved-ci-cd/
+
+# cliff
+Command Line Interface Formulation Framework (cliff). cliff is a framework for building command-line programs. It uses plugins to define sub-commands, output formatters, and other extensions. We learned about its syntax and how it is used in OpenStackClient. We also explored OpenStackClient hierarchy with cliff, osc-lib, and OpenStackClient.
+* cliff: a framework for command-line programs that uses entry points to manage subcommands
+* osc-lib: general part of OSC that connects to the cloud and does most of the authentication
+* OSC: provides information of services and commands and does a small part of the authentication
+
+# Unit and functional testing
+We learned to write useful unit tests to instill confidence that our implementation doesn't just work but that it always works. OpenStackClient also maintains a set of functional tests that are optimally designed to be run against OpenStack’s gate. Our implementation also required that we make changes to functional tests of OpenStackClient to ensure our changes work as intended with specified functional requirements of the project. Commands are tested by feeding them input and examining the output, and internal program structure is rarely considered. Functional testing usually describes what the system does.
+
+# Opensource development
+Open-source software is software with source code that anyone can inspect, modify, and enhance. We learned that contributing to open source can be a rewarding way to learn, teach, and build experience in just about any skill you can imagine. We were able to take a code change from start to end to get it merged into production of an open-source project while maintaining coding standards, addressing code review feedback, following style guidelines, and writing and passing useful tests. This has been a challenging and rewarding experience.
+
 
 ## 8. Main Obstacles
 
