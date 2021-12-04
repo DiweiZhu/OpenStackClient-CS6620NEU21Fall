@@ -90,7 +90,45 @@ It may be a challenge anticipating how long our tasks may take given the stringe
 
 ## 6. Accomplishment
 
+### Development Environment Setup
 
+A devstack is setup for our development. DevStack is a series of extensible scripts used to quickly bring up a complete OpenStack environment based on the latest versions of everything from git master. It is used interactively as a development environment and as the basis for much of the OpenStack project’s functional testing. For each command we are working on, this devstack is uttilized to test the functionality of the command.
+
+Ssh jump server is setup. Because of the fact that we need 5 development instance for our 5 members and the have only 2 floating IP addresses in our OpenStack project, we need to setup an ssh jump server so that everyone of us can ssh to the development instance of our own.
+
+### Nova commands migrated
+
+The commands we have migrated:
+- server backup create
+- server image create
+- server suspend
+- server resume
+- server pause
+- server unpause
+- server add volume
+- server remove volume
+- server add network
+- server remove network
+- server add port
+- server remove port
+
+The commands that are under review:
+- server list volume
+- server lock
+- compute service list
+- compute service set
+- compute service delete
+- server start
+- server stop
+- server dump create
+- server show
+
+### Modification to OpenStackSDK
+
+In some special cases OpenStackSDK might does not provide full support for a command or has some bug.
+- Add OpenStackSDK method to support command server dump create.
+- Fix bug in class definition of ServerDiagnostics
+- Add \_max_microverion into ServerDiagnostics so that it calls new version of API by default.
 
 ## 7. What Learned
 
