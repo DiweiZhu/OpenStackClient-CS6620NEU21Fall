@@ -220,16 +220,116 @@ Sprint | Tasks
 3 |We shall focus on bringing the commands that are missing in OpenStackSDK for Nova client. This is done by adding the proxy classes/methods in the OpenStackSDK for Nova. After this, it is critical to run a proper testing suite to make sure there is no impact on the system.
 4 |The next task is to plug the gaps in commands that are already in the OpenStackSDK. We do this by debugging why the command is not working as expected and adding/fixing the code.
 
+### Installation
+Some Linux distributions include packaged versions of the OpenStack command-line clients that you can install directly, but we’ll install from Pip. Install pip through the package manager for your system:
+1. Step 1: Install Python Pip tool
+```sh
+$ sudo apt-get -y update
+$ sudo apt-get -y install python-dev python-pip
+$ sudo pip install --upgrade pip
+
+------------ Install pip on CentOS / RHEL ----------
+$ sudo yum -y install python-devel python-pip
+$ sudo pip install --upgrade pip
+
+------------ Install pip on Arch / Manjaro ----------
+$ sudo pacman -Syy
+$ sudo pacman -S python-pip
+$ sudo pip install --upgrade pip
+
+--------- Install pip on macOS ----------------
+$ sudo easy_install pip
+````
+
+2: Install OpenStack Client
+
+```sh
+$ git clone https://opendev.org/openstack/python-openstackclient.git openstackclient
+$ cd openstackclient
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -e .
+```
+OR
+
+```sh
+$ mkdir openstackclient
+$ cd openstackclient
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install python-openstackclient
+```
+
+3. Configure OpenStackClient to connect to OpenStack
+The CLI is configured via environment variables and command-line options as listed in https://docs.openstack.org/python-openstackclient/latest/cli/authentication.html.
+
+Authentication using username/password is most commonly used:
+
+```sh
+$ export OS_AUTH_URL=<url-to-openstack-identity>
+$ export OS_IDENTITY_API_VERSION=3
+$ export OS_PROJECT_NAME=<project-name>
+$ export OS_PROJECT_DOMAIN_NAME=<project-domain-name>
+$ export OS_USERNAME=<username>
+$ export OS_USER_DOMAIN_NAME=<user-domain-name>
+$ export OS_PASSWORD=<password>  # (optional)
+```
+
+OR The corresponding command-line options look very similar:
+```sh
+--os-auth-url <url>
+--os-identity-api-version 3
+--os-project-name <project-name>
+--os-project-domain-name <project-domain-name>
+--os-username <username>
+--os-user-domain-name <user-domain-name>
+[--os-password <password>]
+```
+
+OR clouds.yaml is a configuration file that contains everything needed to connect to one or more clouds. It may contain private information and is generally considered private to a user.
+
+OpenStackClient looks for a file called clouds.yaml in the following locations:
+#current directory
+* ~/.config/openstack
+* /etc/openstack
+> The first file found wins.
+
+```
+clouds:
+  devstack:
+    auth:
+      auth_url: http://192.168.122.10:35357/
+      project_name: demo
+      username: demo
+      password: 0penstack
+    region_name: RegionOne
+  ds-admin:
+    auth:
+      auth_url: http://192.168.122.10:35357/
+      project_name: admin
+      username: admin
+      password: 0penstack
+    region_name: RegionOne
+  infra:
+    cloud: rackspace
+    auth:
+      project_id: 275610
+      username: openstack
+      password: xyzpdq!lazydog
+    region_name: DFW,ORD,IAD
+    interface: internal
+
+```
+
+
 ### Mentors:
 * Artem Goncharov <artem.goncharov@gmail.com>
 * Stephen Finucane <stephenfin@redhat.com>
 * Kendall Nelson <kennelson11@gmail.com>
 
-
 ### Team:
-* Thrivikram Mudunuri
-* Suneeth Ravi
-* Ritvik Vinodkumar
-* Diwei Zhu
-* Ujjval Sharma
-
+* Thrivikram Mudunuri <mudunuri.t@northeastern.edu>
+* Suneeth Ravi <ravi.sun@northeastern.edu>
+* Ritvik Vinodkumar <vinodkumar.r@northeastern.edu>
+* Diwei Zhu <zhu.diw@northeastern.edu>
+* Ujjval Sharma <sharma.uj@northeastern.edu>
