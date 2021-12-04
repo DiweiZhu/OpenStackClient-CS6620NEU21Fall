@@ -205,7 +205,10 @@ Open-source software is software with source code that anyone can inspect, modif
 
 ## 9. Future Work
 
-During the entirity of our work for OpenStackClient we were faced with some challenging situations and their resolution depended on implementing new changes in the OpenStackSDK before we could migrate some commands. As discussed in the obstacles <>
+During the entirity of our work for OpenStackClient we were faced with some challenging situations and their resolution depended on implementing new changes in the OpenStackSDK before we could migrate some commands. As discussed in the obstacles these commads can't be migrated as of now as they need more changes in the SDK, which are expected to roll out in next year's release. As a result these commands will be left to be picked up in the future, where any Open Source contributor working for OpenStack community can take over our branch and simply push the code to be merged. As of today we have 4 such commands.
+
+Additionally all of our team members have been invited to be an Open Source contributor for the Open Stack community by our Mentors after we graduate, and most of us would be going forward to be a continued member of this wonderful community of Open Stack Developers.
+
 ## 10. Release Notes: [need refine]
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
