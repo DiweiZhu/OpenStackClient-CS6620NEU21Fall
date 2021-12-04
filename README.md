@@ -2,25 +2,30 @@
 # OpenStackClient
 ** **
 
-# Integrate and plug Cinder functionalities into OpenStackClient Core [need refine]
+# OpenStack
 
-OpenStack is an open-source platform that allows you to create private and public clouds. openstackclient is the unified client for interacting with OpenStack-based clouds. It is a Python-based client that supports most OpenStack services, including the Compute (nova) service, Networking (neutron) service, and Block Storage (cinder) service. It also provides a plugin architecture to allow users to extend commands or add support for non-core services. The unified OpenStack client is intended to replace a large number of project-specific clients.
+OpenStack is an open-source platform that allows you to create private and public clouds. OpenStackClient (OSC) is the unified client for interacting with OpenStack-based clouds. It is a Python-based command line program that supports most OpenStack services, including the six core services: Compute (nova), Networking (neutron), Block Storage (cinder), Identity (keystone), Inventory (placement), Images (glance). It also provides a plugin architecture to allow users to extend commands or add support for non-core services. The unified OpenStack client is intended to replace a large number of project-specific clients.
 See:
 * [Openstackclient](https://docs.openstack.org/python-openstackclient/latest/)
 * [OpenStack Services](https://www.openstack.org/software/project-navigator/openstack-components#openstack-services)
 
+# Switch nova commands from using novaclient to using OpenStackSDK
 
-## 1.   Vision and Goals Of The Project: [need refine]
+## 1.   Vision and Goals Of The Project:
+
+OpenStack is a set of components, both services and libraries. Most OpenStack componenets are managed by separate teams and therefore work a little differently from each other. This causes problems such as different versioning systems, or different command patterns leading to additional learning cost for OpenStack users.
+
+Two projects aim to address this gap. Firstly, the unified OpenStack client, openstackclient or "OSC", aims to provide a single entrypoint to interact with all OpenStack services from the command line, masking differences in the underlying APIs and terminologies. This replaces the CLIs provides by the individual clients. The other project is the unified OpenStack SDK, openstacksdk. This provides a single way to interact with an OpenStack cloud programmatically via Python. This replaces the libraries provided by the individual clients. It aims to support all versions of the APIs provided by these services, past, present and future.
+
+![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/VisionGoals.png)
 
 openstackclient is intended to replace the project-specific clients used in the past, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
 
-High-level goals of this project include:
+The focus of this project is on nova and cinder. High-level goals of this project include:
 
-* Migrate openstackclient from project-specific python-cinderclient to openstacksdk
+* Migrate openstackclient from project-specific libraries (for nova and cinder) to openstacksdk
 
-* Identify CLI gaps in OpenStackClient's support for the Block Storage service (cinder)
-
-* Achieve feature-parity with ([python-cinderclient](https://opendev.org/openstack/python-cinderclient))
+* Identify CLI gaps (commands that are not supported yet) in OpenStackClient's support for the Block Storage service (cinder) and achieve feature-parity with ([python-cinderclient](https://opendev.org/openstack/python-cinderclient))
 
 ## 2. Users/Personas Of The Project:
 
@@ -30,55 +35,62 @@ OpenStack is used by large enterprises, governments, and startups to build publi
 
 ** **
 
-## 3.   Scope and Features Of The Project:  [need refine]
+## 3.   Scope and Features Of The Project:
 
-* There are a handful of commands and options that exist in the project-specific clients but not in openstackclient. There are a lot of commands already identified by the OpenStack team and have already been transitioned to openstackclient. There are a few gaps left. The first of those remaining gaps is within novaclient and openstackclient. Once these gaps have been closed, the Nova team can consider deprecating novaclient.
+* The first task is to migrate openstackclient from using project-specific libraries to using openstacksdk. This task needs to be done for both nova and cinder. For cinder, this will also resolve the issue of cinderclient dropping support for v2 of the API. This item is impacting users and is a priority for the community.
+        * Commands for both nova and cinder can be found here: https://github.com/openstack/python-openstackclient/tree/master/doc/source/cli/data
+        * The OpenStackClient repository: https://github.com/openstack/python-openstackclient
+        * APIs for nova: https://docs.openstack.org/api-ref/compute/
+        * APIS for cinder: https://docs.openstack.org/api-ref/block-storage/
+	* These commands should be properly grouped and treated as groups
+	* Commands using novaclient/cinderclient methods should be modified to use OpenStackSDK methods
+	* Cinder commands in OpenStackSDK still supports v2.0 API, which solves the issue mentioned above
+
+* There are a handful of commands and options that exist in the project-specific clients but not in OpenStackClient. There are a lot of commands already identified by the OpenStack team and have already been transitioned to openstacksdk. There are a few gaps left. The first of those remaining gaps is within cinderclient and openstackclient. Once these gaps have been closed, the Nova team can consider deprecating novaclient.
 	* All nova commands already exist in OpenStackClient.
 	* Must inspect these commands to check if their syntax is consistent, and if they work as intended.
 	* For those that do not perform as desired, modify corresponding code, either using nova client methods or migrate to OpenStackSDK.
 	* For those that are not using OpenStackSDK, have them use OpenStackSDK.
 
-* An equally important task is to migrate openstackclient from using project-specific client libraries to openstacksdk. Block storage commands in openstackclient must be migrated to openstacksdk instead of using cinderclient in openstackclient. This is to resolve the issue of cinderclient dropping support for v2 of the API. This item is impacting users and is a priority for the community.
-	* Commands are listed in https://github.com/openstack/python-openstackclient/blob/master/doc/source/cli/data/cinder.csv
-	* Block storage operations can be found here https://opendev.org/openstack/python-openstackclient/src/branch/master/openstackclient/volume
-	* These commands should be properly grouped and treated as groups
-	* Commands using cinderclient methods should be modified to use OpenStackSDK methods
-	* As commands will use OpenStackSDK, they will not rely on v2 APIs anymore
-
-It may be a challenge anticipating how long our tasks may take given the stringent contributor standards, processes, and general unfamiliarity with the massive codebase. Based on our mentors' conservative estimate, we may only be able to complete one of these tasks. The second service (cinder) is harder than the first (nova) as our mentors have already done part of nova, we may set out to complete nova first, and treat cinder as a stretch goal.
-
 ** **
 
-## 4. Solution Concept [need refine]
+## 4. Solution Concept
 
-OpenStack provides multiple services:
-* Nova (compute)
-* Neutron (networking)
-* Cinder (block storage)
-* Glance (image storage)
-* Keystone (identity)
-* Placement (inventory)
-
-As most services are managed by different teams, they have slightly different APIs, and different "clients" to interact with the APIs.
-
-![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/SolutionConcept.png)
-
-Each client consists of a command-line interface (CLI) and a library. If a user wants to use multiple services, they need to separately deal with multiple CLIs and libraries, with inconsistent styles, leading to a bad user experience.
-
-To improve user experience, OpenStackClient and OpenStackSDK are envisioned. OpenStackClient is a synthesized version of all the CLIs (with some of them as plugins), while OpenStackSDK is a synthesized version of all the libraries (and more). As all the CLIs utilize the libraries, OpenStackClient should use OpenStackSDK instead of all the client-specific libraries, for better maintainability and consistency.
-
-In summary, OpenStackClient should utilize methods from OpenStackSDK to provide users with consistent CLI commands for OpenStack services.
+As mentioned above, in a high level, OpenStackClient should utilize methods from OpenStackSDK to provide users with consistent CLI commands for OpenStack services.
 
 The design for that purpose is:
 1. Add commands of services (nova, neutron, cinder, glance, keystone) into OpenStackClient, so that users have a CLI with a consistent style. For this, it doesn't matter if the OpenStackClient is using client-specific libraries or OpenStackSDK, because the behavior should be the same.
 2. Migrate OpenstackClient from using client-specific libraries to using OpenStackSDK.
 
+For our project, we need to do:
+1. Migrate nova and cinder commands from using their specific client to using OpenStackSDK.
+2. Find cinder commands that are supported in cinderclient but not supported in OpenStackClient, and add them into OpenStackClient.
 
-## 5. Acceptance criteria [need refine]
+For the first task, our methodology is:
+1. Find out all commands of the two services in OpenStackClient, that are still using either novaclient or cinderclient methods.
+2. For all of these commands, track them in the code base and find out which APIs their client-specific methods are ultimately calling.
+3. Find corresponding methods in OpenStackSDK that are calling the same APIs.
+4. If the corresponding methods exist in OpenStackSDK, change code of the commands to use the methods.
+5. If they do not exist, send requests to the API directly in OpenStackClient.
+6. Write unit tests and functional tests to make sure the modified methods act as expected.
 
-Two major tasks are envisioned as an end goal for our project: OpenStack’s task to transition all project-specific clients to openstackclient has already had significant progress prior to starting our project. Some clients have already been replaced. Our aim is to migrate the client for Cinder(Block Storage service) - cinderclient to openstacksdk. The second goal is to identify commands and options that exist in the project-specific clients but not openstackclient and then add these missing commands to openstackclient.
+For the second task, our methodology is similar:
+1. Find out all commands that exist in cinderclient but not in OpenStackClient, by listing all commands and comparing.
+2. For the commands we need to add into OpenStackClient, find out which APIs their client-specific methods are ultimately calling.
+3. Find corresponding methods in OpenStackSDK that are calling the same APIs.
+4. If the corresponding methods exist in OpenStackSDK, change code of the commands to use the methods.
+5. If they do not exist, send requests to the API directly in OpenStackClient.
+6. Write unit tests and functional tests to make sure the new added methods act as expected.
+
+## 5. Acceptance criteria
+
+Two major tasks are envisioned as an end goal for our project: OpenStack’s task to transition all project-specific clients to openstackclient has already had significant progress prior to starting our project. Some clients have already been replaced. Our aim is to migrate the client for Nova(Compute service) - novaclient to OpenStackSDK, and Cinder(Block Storage service) - cinderclient to OpenStackSDK. The second goal is to identify commands and options that exist in the project-specific clients but not openstackclient and then add these missing commands to openstackclient.
+
+It may be a challenge anticipating how long our tasks may take given the stringent contributor standards, processes, and general unfamiliarity with the massive codebase. Based on our mentors' estimate, we may only be able to complete one of these tasks. The cinder is harder than the nova as our mentors have already done part of nova, we may set out to complete nova first, and treat cinder as a stretch goal.
 
 ## 6. Accomplishment
+
+
 
 ## 7. What Learned
 
