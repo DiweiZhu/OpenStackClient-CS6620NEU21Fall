@@ -112,7 +112,7 @@ The commands we have migrated (12 in total):
 - server add port
 - server remove port
 
-The commands that are under review (8 in total):
+The commands that are under review (9 in total):
 - server list volume
 - server lock
 - compute service list
@@ -121,11 +121,13 @@ The commands that are under review (8 in total):
 - server start
 - server stop
 - server group show
+- server add fixed ip
 
-The commands that are in development (3 in total):
+The commands that are in development (4 in total):
 - server dump create
 - server show
 - server create
+- server update volume
 
 ### Modification to OpenStackSDK
 
