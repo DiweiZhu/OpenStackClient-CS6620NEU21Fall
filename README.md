@@ -213,12 +213,7 @@ Additionally, all of our team members have been invited to be an Open Source con
 
 Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
 
-Sprint | Tasks
-:------: | ------
-1 | Setup the OpenStackClient environment on the Cloud VM: <br><ul><li>Create accounts for IRC and Gerrit</li><li>Set up a Linux-based development environment</li><li>Set up an all-in-one OpenStack deployment that you can use for testing</li></ul></li></ul>
-2 | The next step is to go through the source code and get familiar with the functionality of Nova client service. This is crucial in understanding the gaps to figure out how to migrate the remaining commands that still use native Nova API’s and libraries and migrate them to OpenStackSDK. To completely understand the OpenStackClient functionality we need to execute the basic set of commands like create and modify Cloud environments.
-3 |We shall focus on bringing the commands that are missing in OpenStackSDK for Nova client. This is done by adding the proxy classes/methods in the OpenStackSDK for Nova. After this, it is critical to run a proper testing suite to make sure there is no impact on the system.
-4 |The next task is to plug the gaps in commands that are already in the OpenStackSDK. We do this by debugging why the command is not working as expected and adding/fixing the code.
+During the course of the semester, our team members have worked on learning various concepts required to work on our project and have successfully made considerate contributions to the Open Stack community. Below is a detailed list of learnings and contributions that the team has accomplished and rolled out successfully.
 
 ### Installation
 Some Linux distributions include packaged versions of the OpenStack command-line clients that you can install directly, but we’ll install from Pip. Install pip through the package manager for your system:
