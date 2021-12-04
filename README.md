@@ -215,12 +215,18 @@ Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclie
 
 During the course of the semester, our team members have worked on learning various concepts required to work on our project and have successfully made considerate contributions to the Open Stack community. Below is a detailed list of learnings and contributions that the team has accomplished and rolled out successfully for each sprint.
 
-[### Sprint 1](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-1-19497)
-[### Sprint 2](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-2-11004)
-[### Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
-[### Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
-[### Sprint 5](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-5-3305)
-[### Sprint 6](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-6-15)
+### [Sprint 1](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-1-19497)
+
+### [Sprint 2](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-2-11004)
+
+### [Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
+
+### [Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
+
+### [Sprint 5](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-5-3305)
+
+### [Sprint 6](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-6-15)
+
 
 ### Installation
 Some Linux distributions include packaged versions of the OpenStack command-line clients that you can install directly, but we’ll install from Pip. Install pip through the package manager for your system:
