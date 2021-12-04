@@ -98,7 +98,7 @@ Ssh jump server is setup. Because of the fact that we need 5 development instanc
 
 ### Nova commands migrated
 
-The commands we have migrated:
+The commands we have migrated (12 in total):
 - server backup create
 - server image create
 - server suspend
@@ -112,7 +112,7 @@ The commands we have migrated:
 - server add port
 - server remove port
 
-The commands that are under review:
+The commands that are under review (8 in total):
 - server list volume
 - server lock
 - compute service list
@@ -120,9 +120,12 @@ The commands that are under review:
 - compute service delete
 - server start
 - server stop
+- server group show
+
+The commands that are in development (3 in total):
 - server dump create
 - server show
-- server group show
+- server create
 
 ### Modification to OpenStackSDK
 
