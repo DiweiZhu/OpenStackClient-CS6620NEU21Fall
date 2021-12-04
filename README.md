@@ -215,6 +215,13 @@ Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclie
 
 During the course of the semester, our team members have worked on learning various concepts required to work on our project and have successfully made considerate contributions to the Open Stack community. Below is a detailed list of learnings and contributions that the team has accomplished and rolled out successfully.
 
+### Sprint 1
+### Sprint 2
+### Sprint 3
+### Sprint 4
+### Sprint 5
+### Sprint 6
+
 ### Installation
 Some Linux distributions include packaged versions of the OpenStack command-line clients that you can install directly, but we’ll install from Pip. Install pip through the package manager for your system:
 1. Step 1: Install Python Pip tool
