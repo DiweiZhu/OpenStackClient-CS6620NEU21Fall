@@ -122,6 +122,7 @@ The commands that are under review:
 - server stop
 - server dump create
 - server show
+- server group show
 
 ### Modification to OpenStackSDK
 
