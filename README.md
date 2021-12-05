@@ -243,7 +243,7 @@ In some special cases OpenStackSDK might does not provide full support for a com
 - Add SDK method to support command server dump create.
 - Fix bug in class definition of ServerDiagnostics
 - Add \_max_microverion into ServerDiagnostics so that it calls new version of API by default.
-- Added the missing field BlockDeviceMappingID in the resource for VolumeAttachments.
+- Added the missing field BlockDeviceMappingID in the SDK resource for VolumeAttachments.
 - The method for updating volume attachments is missing support for a attribute.
 
 ## 8. What We Learned
