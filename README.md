@@ -35,7 +35,7 @@ The focus of this project is on nova and cinder. High-level goals of this projec
 
 * OpenStackClient (aka OSC) is a command-line client for OpenStack that brings the command set for Compute, Identity, Image, Object Storage, and Block Storage APIs together in a single shell with a uniform command structure.
 
-* OpenStackSDK
+* OpenStackSDK is a unified client library for building applications to work with OpenStack clouds. This provides a single way to interact with an OpenStack cloud programmatically via Python.
 
 ** **
 
