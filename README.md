@@ -13,7 +13,7 @@ See:
 
 ## 1.   Vision and Goals Of The Project:
 
-OpenStack is a set of components, both services and libraries. Most OpenStack componenets are managed by seperate teams and therefore work a little differently from each other. This causes problems such as different versioning systems, or different command patterns leading to additional learning cost for OpenStack users.
+OpenStack is a set of components, both services and libraries. Most OpenStack componenets are managed by separate teams and therefore work a little differently from each other. This causes problems such as different versioning systems, or different command patterns leading to additional learning cost for OpenStack users.
 
 Two projects aim to address this gap:
 * OpenStackClient: The unified OpenStack client, openstackclient or "OSC", aims to provide a single entrypoint to interact with all OpenStack services from the command line, masking differences in the underlying APIs and terminologies. This replaces the CLIs provides by the individual clients. 
