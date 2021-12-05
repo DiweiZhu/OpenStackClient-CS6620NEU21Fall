@@ -322,8 +322,6 @@ Additionally, all of our team members have been invited to be an Open Source con
 
 ## 11. Release Notes: [need refine]
 
-Taiga Board: https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/timeline
-
 During the course of the semester, our team members have worked on learning various concepts required to work on our project and have successfully made considerate contributions to the Open Stack community. Below is a detailed list of learnings and contributions that the team has accomplished and rolled out successfully for each sprint.
 
 ### [Sprint 1](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-1-19497)
