@@ -132,7 +132,7 @@ $ source venv/bin/activate
 $ pip install python-openstackclient
 ```
 
-3. Configure OpenStackClient to connect to OpenStack
+3. Configure OpenStackClient to connect to OpenStack. 
 The CLI is configured via environment variables and command-line options as listed in https://docs.openstack.org/python-openstackclient/latest/cli/authentication.html.
 
 Authentication using username/password is most commonly used:
@@ -197,9 +197,9 @@ clouds:
 
 ### Development Environment Setup
 
-A devstack is setup for our development. DevStack is a series of extensible scripts used to quickly bring up a complete OpenStack environment based on the latest versions of everything from git master. It is used interactively as a development environment and as the basis for much of the OpenStack project’s functional testing. For each command we are working on, this devstack is uttilized to test the functionality of the command.
+A devstack is setup for our development. DevStack is a series of extensible scripts used to quickly bring up a complete OpenStack environment based on the latest versions of everything from git master. It is used interactively as a development environment and as the basis for much of the OpenStack project’s functional testing. For each command we are working on, this devstack is utilized to test the functionality of the command.
 
-Ssh jump server is setup. Because of the fact that we need 5 development instance for our 5 members and the have only 2 floating IP addresses in our OpenStack project, we need to setup an ssh jump server so that everyone of us can ssh to the development instance of our own.
+We need 5 development instance for our 5 team members. However, we have only 2 floating IP addresses in our OpenStack project. As a result, we need to setup a ssh jump server  so that everyone of us can ssh to the development instance of our own. 
 
 ### Nova commands migrated
 
