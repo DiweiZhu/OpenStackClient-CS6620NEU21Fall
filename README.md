@@ -334,20 +334,20 @@ During the first Sprint, we spend most of our time on setting up the Dev environ
 
 ### [Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
 
-In this Sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. During this sprint we achieved our first success as one of the commands "CreateServerBackup" was successfully merged to the master branch of OpenStackClient. At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work together.
+In this Sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. As the next step, we figured out which commands were to be migrated from Nova client to OpenStackSDK and made a plan for migrating these commands. Additionally, we had set up an ssh jump server so that we could connect to our dev instances.
 
 ### [Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
+
+During this sprint we achieved our first success as one of the commands "CreateServerBackup" was successfully merged to the master branch of OpenStackClient. At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work together and learned how OpenStack can be used as a cloud service provider on which Kubernetes can be deployed.
+
+### [Sprint 5](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-5-3305)
 
 At this stage of the semester, we gained good knowledge on OpenStack and were able to migrate a total of 3 commands and were working on 14 other commands.
 During this Sprint we also demonstrated our learnings on how a command is interpreted by OpenStackClient and showcased all the internal calls and methods that are responsible for the execution of a command.
 
-### [Sprint 5](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-5-3305)
-
-It was at this stage of our work where most of our contribution was added into the OpenStack community as we were able to migrate 12 commands to OpenStackSDK and it was readily available in the master branch of OpenStack. We also learned how Functional Test cases were written in OpenStack and had successfully written one that went on to be merged in the master branch.
-
 ### [Sprint 6](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-6-15)
 
-As we enter the final Sprint of our Project we focused on pushing out the open tasks and handing over the partial changes to our mentors which can later be migrated to OpenStackSDK. Additionally, we have successfully submitted our Project report and final presentations.
+It was at this stage of our work where most of our contribution was added into the OpenStack community as we were able to migrate 12 commands to OpenStackSDK and it was readily available in the master branch of OpenStack. We also learned how Functional Test cases were written in OpenStack and had successfully written one that went on to be merged in the master branch. As we enter the final days of our Project we focused on pushing out the open tasks and handing over the partial changes to our mentors which can later be migrated to OpenStackSDK. Additionally, we have successfully submitted our Project report and final presentations.
 
 ### Mentors:
 * Artem Goncharov <artem.goncharov@gmail.com>
