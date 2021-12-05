@@ -330,11 +330,11 @@ In this sprint, we focused on understanding the strengths of our team members an
 
 ### [Sprint 2](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-2-11004)
 
-During the first Sprint, we spend most of our time on setting up the Dev environment for each team member and deployed DevStack, OpenStackClient, and OpenStackSDK on MOC. In addition to that, we focused on brushing our skills in Python and Linux which were required to understand our Project. 
+During this sprint, we spend most of our time on setting up the Dev environment for each team member and deployed DevStack, OpenStackClient, and OpenStackSDK on MOC. In addition to that, we focused on brushing our skills in Python and Linux which were required to understand our Project. 
 
 ### [Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
 
-In this Sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. As the next step, we figured out which commands were to be migrated from Nova client to OpenStackSDK and made a plan for migrating these commands. Additionally, we had set up an ssh jump server so that we could connect to our dev instances.
+In this sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. As the next step, we figured out which commands were to be migrated from Nova client to OpenStackSDK and made a plan for migrating these commands. Additionally, we had set up an ssh jump server so that we could connect to our dev instances.
 
 ### [Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
 
