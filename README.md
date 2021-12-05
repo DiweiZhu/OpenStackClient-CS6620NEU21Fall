@@ -326,29 +326,29 @@ During the course of the semester, our team members have worked on learning vari
 
 ### [Sprint 1](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-1-19497)
 
-During the first Sprint we spend most of our time on settuing up the Dev environment for each team member and deployed DevStack, OpenStackClient and OpenStackSDK on MOC. In addition to that we focused on brushing our skills in Python and Linux which were required to understand our Project. 
+During the first Sprint, we spend most of our time on setting up the Dev environment for each team member and deployed DevStack, OpenStackClient, and OpenStackSDK on MOC. In addition to that, we focused on brushing our skills in Python and Linux which were required to understand our Project. 
 
 ### [Sprint 2](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-2-11004)
 
-In this Sprint we focused on setting up Tox which is used to runing the unit testcases which is used for verifying that our code changes has not impacted any other functionalities. We also focused on setting up our Gerrit accounts which is used for reviewing the code changes. 
+In this Sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. We also focused on setting up our Gerrit accounts which are used for reviewing the code changes.
 
 ### [Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
 
-During this sprint we achived our first success as one of the command "CreateServerBackup" was successfully werged to the master branch of OpenStackClient.
-At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work togeather.
+During this sprint we achieved our first success as one of the commands "CreateServerBackup" was successfully merged to the master branch of OpenStackClient.
+At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work together.
 
 ### [Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
-At this stage into the semester we gained good knowledge on OpenStack and were able to migrate a total of 3 commands and were working on 14 other commands.
-During this Sprint we also demonstrated our learnings on how a command is intrepeted by OpenStackClient and showcased all the internal calls and methods that are responsible for execution of a command.
+
+At this stage of the semester, we gained good knowledge on OpenStack and were able to migrate a total of 3 commands and were working on 14 other commands.
+During this Sprint we also demonstrated our learnings on how a command is interpreted by OpenStackClient and showcased all the internal calls and methods that are responsible for the execution of a command.
 
 ### [Sprint 5](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-5-3305)
 
-It was at this stage of our work where most of our contribution was added into the OpenStack community as we were able to migrate 12 commands to OpenStackSDK and it was readily available in the master branch of OpenStack.
-We also learned how Funtional Test cases were written in OpenStack and had successfully written one that went on to be merged in the master branch.
+It was at this stage of our work where most of our contribution was added into the OpenStack community as we were able to migrate 12 commands to OpenStackSDK and it was readily available in the master branch of OpenStack. We also learned how Functional Test cases were written in OpenStack and had successfully written one that went on to be merged in the master branch.
 
 ### [Sprint 6](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-6-15)
 
-As we enter our final Sprint of our Project we focused on pushing out the open tasks and handing over the partial changes to our mentors whiich can later be migrated to OpenSTackSDK. Additionally we have successfully completed our Project reports and final presentations.
+As we enter the final Sprint of our Project we focused on pushing out the open tasks and handing over the partial changes to our mentors which can later be migrated to OpenStackSDK. Additionally, we have successfully submitted our Project report and final presentations.
 
 ### Mentors:
 * Artem Goncharov <artem.goncharov@gmail.com>
