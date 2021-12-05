@@ -289,6 +289,7 @@ We learned about the API Microversions framework in OpenStack used to allow chan
 
 ### Zuul and Project Gating
 Zuul is a program that drives continuous integration, delivery, and deployment systems with a focus on project gating and interrelated projects.
+
 * Zuul’s configuration is organized around the concept of a pipeline. In Zuul, a pipeline encompasses a workflow process that can be applied to one or more projects.
 * Pipelines have associated triggers which are descriptions of events that should cause something to be enqueued into a pipeline.
 * Once all of the jobs for an item in a pipeline have been run, the pipeline’s reporters are responsible for reporting the results of all of the jobs.
@@ -315,7 +316,7 @@ Open-source software is software with source code that anyone can inspect, modif
 
 During the entirety of our work for OpenStackClient, we were faced with some challenging situations and their resolution depended on implementing new changes in the OpenStackSDK before we could migrate some commands. As discussed in the obstacles these commands can't be migrated as of now as they need more changes in the SDK, which are expected to roll out in next year's release. As a result, these commands will be left to be picked up in the future, where any Open Source contributor working for the OpenStack community can take over our branch and simply push the code to be merged. As of today, we have 4 such commands. Going forward we will be focusing on moving more commands from Nova to SDK and eventually move on to Cinder.
 
-Additionally, all of our team members have been invited to be an Open Source contributor for the Open Stack community by our Mentors after we graduate, and most of us would be going forward to be a continued members of this wonderful community of Open Stack Developers.
+Additionally, all of our team members have been invited to be an Open Source contributor for the Open Stack community by our Mentors after we graduate, and most of us would be going forward to be a continued members of this wonderful community of OpenStack Developers.
 
 ## 11. Release Notes: [need refine]
 
