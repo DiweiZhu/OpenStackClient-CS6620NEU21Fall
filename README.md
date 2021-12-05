@@ -15,7 +15,9 @@ See:
 
 OpenStack is a set of components, both services and libraries. Most OpenStack componenets are managed by seperate teams and therefore work a little differently from each other. This causes problems such as different versioning systems, or different command patterns leading to additional learning cost for OpenStack users.
 
-Two projects aim to address this gap. Firstly, the unified OpenStack client, openstackclient or "OSC", aims to provide a single entrypoint to interact with all OpenStack services from the command line, masking differences in the underlying APIs and terminologies. This replaces the CLIs provides by the individual clients. The other project is the unified OpenStack SDK, openstacksdk. This provides a single way to interact with an OpenStack cloud programmatically via Python. This replaces the libraries provided by the individual clients. It aims to support all versions of the APIs provided by these services, past, present and future.
+Two projects aim to address this gap:
+* OpenStackClient: The unified OpenStack client, openstackclient or "OSC", aims to provide a single entrypoint to interact with all OpenStack services from the command line, masking differences in the underlying APIs and terminologies. This replaces the CLIs provides by the individual clients. 
+* OpenStackSDK: The other project is the unified OpenStack SDK. This provides a single way to interact with an OpenStack cloud programmatically via Python. This replaces the libraries provided by the individual clients. It aims to support all versions of the APIs provided by these services, past, present and future.
 
 ![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/VisionGoals.png)
 
