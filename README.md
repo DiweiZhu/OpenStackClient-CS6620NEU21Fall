@@ -31,11 +31,11 @@ The focus of this project is on nova and cinder. High-level goals of this projec
 
 ## 2. Users/Personas Of The Project:
 
-OpenStackClient (aka OSC) is a command-line client for OpenStack that brings the command set for Compute, Identity, Image, Object Storage, and Block Storage APIs together in a single shell with a uniform command structure.
+* OpenStack is used by large enterprises, governments, and startups to build public and private clouds. Achieving feature-parity between project-specific clients and the unified CLI tool will benefit all users of OpenStack looking for a single easy-to-use client that supports most of OpenStack's services.
 
-OpenStackSDK
+* OpenStackClient (aka OSC) is a command-line client for OpenStack that brings the command set for Compute, Identity, Image, Object Storage, and Block Storage APIs together in a single shell with a uniform command structure.
 
-OpenStack is used by large enterprises, governments, and startups to build public and private clouds. Achieving feature-parity between project-specific clients and the unified CLI tool will benefit all users of OpenStack looking for a single easy-to-use client that supports most of OpenStack's services.
+* OpenStackSDK
 
 ** **
 
