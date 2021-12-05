@@ -320,22 +320,35 @@ During the entirety of our work for OpenStackClient, we were faced with some cha
 
 Additionally, all of our team members have been invited to be an Open Source contributor for the Open Stack community by our Mentors after we graduate, and most of us would be going forward to be a continued members of this wonderful community of OpenStack Developers.
 
-## 11. Release Notes: [need refine]
+## 11. Release Notes:
 
 During the course of the semester, our team members have worked on learning various concepts required to work on our project and have successfully made considerate contributions to the Open Stack community. Below is a detailed list of learnings and contributions that the team has accomplished and rolled out successfully for each sprint.
 
 ### [Sprint 1](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-1-19497)
 
+During the first Sprint we spend most of our time on settuing up the Dev environment for each team member and deployed DevStack, OpenStackClient and OpenStackSDK on MOC. In addition to that we focused on brushing our skills in Python and Linux which were required to understand our Project. 
+
 ### [Sprint 2](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-2-11004)
+
+In this Sprint we focused on setting up Tox which is used to runing the unit testcases which is used for verifying that our code changes has not impacted any other functionalities. We also focused on setting up our Gerrit accounts which is used for reviewing the code changes. 
 
 ### [Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
 
+During this sprint we achived our first success as one of the command "CreateServerBackup" was successfully werged to the master branch of OpenStackClient.
+At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work togeather.
+
 ### [Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
+At this stage into the semester we gained good knowledge on OpenStack and were able to migrate a total of 3 commands and were working on 14 other commands.
+During this Sprint we also demonstrated our learnings on how a command is intrepeted by OpenStackClient and showcased all the internal calls and methods that are responsible for execution of a command.
 
 ### [Sprint 5](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-5-3305)
 
+It was at this stage of our work where most of our contribution was added into the OpenStack community as we were able to migrate 12 commands to OpenStackSDK and it was readily available in the master branch of OpenStack.
+We also learned how Funtional Test cases were written in OpenStack and had successfully written one that went on to be merged in the master branch.
+
 ### [Sprint 6](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-6-15)
 
+As we enter our final Sprint of our Project we focused on pushing out the open tasks and handing over the partial changes to our mentors whiich can later be migrated to OpenSTackSDK. Additionally we have successfully completed our Project reports and final presentations.
 
 ### Mentors:
 * Artem Goncharov <artem.goncharov@gmail.com>
