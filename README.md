@@ -314,6 +314,9 @@ Open-source software is software with source code that anyone can inspect, modif
 
 ## 9. Main Obstacles
 
+* One of 
+* In Openstack, the expected way to create a new change is to create a Gerrit code review, and get this change reviewed by experienced contributors. In our case, our mentors were the ones who reviewed and approved our patches. However, patches are reviewed in a staggered manner every week, with large gaps between each consecutive review. As a result, there were significant periods of wait time on our side as we wait to get feedback. 
+
 ## 10. Future Work
 
 During the entirety of our work for OpenStackClient, we were faced with some challenging situations and their resolution depended on implementing new changes in the OpenStackSDK before we could migrate some commands. As discussed in the obstacles these commands can't be migrated as of now as they need more changes in the SDK, which are expected to roll out in next year's release. As a result, these commands will be left to be picked up in the future, where any Open Source contributor working for the OpenStack community can take over our branch and simply push the code to be merged. As of today, we have 4 such commands. Going forward we will be focusing on moving more commands from Nova to SDK and eventually move on to Cinder.
