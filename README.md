@@ -43,13 +43,13 @@ The focus of this project is on nova and cinder. High-level goals of this projec
 
 * The first task is to migrate openstackclient from using project-specific libraries to using openstacksdk. This task needs to be done for both nova and cinder. For cinder, this will also resolve the issue of cinderclient dropping support for v2 of the API. This item is impacting users and is a priority for the community.
         
-	* Commands for both nova and cinder can be found here: https://github.com/openstack/python-openstackclient/tree/master/doc/source/cli/data
-        * The OpenStackClient repository: https://github.com/openstack/python-openstackclient
-        * APIs for nova: https://docs.openstack.org/api-ref/compute/
-        * APIS for cinder: https://docs.openstack.org/api-ref/block-storage/
-	* These commands should be properly grouped and treated as groups
-	* Commands using novaclient/cinderclient methods should be modified to use OpenStackSDK methods
-	* Cinder commands in OpenStackSDK still supports v2.0 API, which solves the issue mentioned above
+    * Commands for both nova and cinder can be found here: https://github.com/openstack/python-openstackclient/tree/master/doc/source/cli/data
+    * The OpenStackClient repository: https://github.com/openstack/python-openstackclient
+    * APIs for nova: https://docs.openstack.org/api-ref/compute/
+    * APIS for cinder: https://docs.openstack.org/api-ref/block-storage/
+    * These commands should be properly grouped and treated as groups
+    * Commands using novaclient/cinderclient methods should be modified to use OpenStackSDK methods
+    * Cinder commands in OpenStackSDK still supports v2.0 API, which solves the issue mentioned above
 
 * There are a handful of commands and options that exist in the project-specific clients but not in OpenStackClient. There are a lot of commands already identified by the OpenStack team and have already been transitioned to openstacksdk. There are a few gaps left. The first of those remaining gaps is within cinderclient and openstackclient. Once these gaps have been closed, the Nova team can consider deprecating novaclient.
 	
