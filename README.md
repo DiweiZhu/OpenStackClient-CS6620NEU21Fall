@@ -326,16 +326,15 @@ During the course of the semester, our team members have worked on learning vari
 
 ### [Sprint 1](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-1-19497)
 
-During the first Sprint, we spend most of our time on setting up the Dev environment for each team member and deployed DevStack, OpenStackClient, and OpenStackSDK on MOC. In addition to that, we focused on brushing our skills in Python and Linux which were required to understand our Project. 
+In this sprint, we focused on understanding the strengths of our team members and focused on setting up IRC for communicating with other developers of the OpenStack community and we also focused on setting up our Gerrit accounts which are used for reviewing the code changes.
 
 ### [Sprint 2](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-2-11004)
 
-In this Sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. We also focused on setting up our Gerrit accounts which are used for reviewing the code changes.
+During the first Sprint, we spend most of our time on setting up the Dev environment for each team member and deployed DevStack, OpenStackClient, and OpenStackSDK on MOC. In addition to that, we focused on brushing our skills in Python and Linux which were required to understand our Project. 
 
 ### [Sprint 3](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-3-3773)
 
-During this sprint we achieved our first success as one of the commands "CreateServerBackup" was successfully merged to the master branch of OpenStackClient.
-At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work together.
+In this Sprint, we focused on setting up Tox which is used for running the unit test cases which is used for verifying that our code changes have not impacted any other functionalities. During this sprint we achieved our first success as one of the commands "CreateServerBackup" was successfully merged to the master branch of OpenStackClient. At this time we were also working closely with our mentors on understanding how OpenStack and Kubernetes can work together.
 
 ### [Sprint 4](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint4-324)
 
