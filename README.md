@@ -21,7 +21,7 @@ Two projects aim to address this gap:
 
 ![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/VisionGoals.png)
 
-openstackclient is intended to replace the project-specific clients used in the past, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in openstackclient.
+OpenStackClient is intended to replace the project-specific clients used in the past, such as novaclient and neutronclient, and offer a unified client tool to use OpenStack services. However, while projects such as the Networking service (neutron) have switched to using openstackclient as their primary CLI - either via integration in openstackclient core or an openstackclient plugin - other services have not yet provided full feature parity in OpenStackClient.
 
 The focus of this project is on nova and cinder. High-level goals of this project include:
 
@@ -32,6 +32,8 @@ The focus of this project is on nova and cinder. High-level goals of this projec
 ## 2. Users/Personas Of The Project:
 
 OpenStackClient (aka OSC) is a command-line client for OpenStack that brings the command set for Compute, Identity, Image, Object Storage, and Block Storage APIs together in a single shell with a uniform command structure.
+
+OpenStackSDK
 
 OpenStack is used by large enterprises, governments, and startups to build public and private clouds. Achieving feature-parity between project-specific clients and the unified CLI tool will benefit all users of OpenStack looking for a single easy-to-use client that supports most of OpenStack's services.
 
