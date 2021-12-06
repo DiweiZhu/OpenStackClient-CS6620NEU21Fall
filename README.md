@@ -246,6 +246,8 @@ In some special cases OpenStackSDK might does not provide full support for a com
 - Added the missing field BlockDeviceMappingID in the SDK resource for VolumeAttachments.
 - The method for updating volume attachments is missing support for a attribute.
 
+![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/BurnddownChart.png)
+
 ## 8. What We Learned
 
 ### What is OpenStack?
