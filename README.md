@@ -307,6 +307,9 @@ Command Line Interface Formulation Framework (cliff). cliff is a framework for b
 * osc-lib: general part of OSC that connects to the cloud and does most of the authentication
 * OSC: provides information of services and commands and does a small part of the authentication
 
+### Stevedore
+Stevedore is a package to help manage the packages and entry points. It is built upon the setuptools entry point, so that it avoids creating a new extension mechanism. It's main job is to find the packages or plugins, for example the nova client module or the cinder client module. These modules contain the information of the commands they support in the form of entry points. The code for managing entry points tends to be repetitive, though, so stevedore provides manager classes for implementing common patterns for using dynamically loaded extensions.
+
 ### Unit and functional testing
 We learned to write useful unit tests to instill confidence that our implementation doesn't just work but that it always works. OpenStackClient also maintains a set of functional tests that are optimally designed to be run against OpenStack’s gate. Our implementation also required that we make changes to functional tests of OpenStackClient to ensure our changes work as intended with specified functional requirements of the project. Commands are tested by feeding them input and examining the output, and internal program structure is rarely considered. Functional testing usually describes what the system does.
 
