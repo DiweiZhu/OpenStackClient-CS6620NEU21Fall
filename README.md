@@ -246,8 +246,6 @@ In some special cases OpenStackSDK might does not provide full support for a com
 - Added the missing field BlockDeviceMappingID in the SDK resource for VolumeAttachments.
 - The method for updating volume attachments is missing support for a attribute.
 
-![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/BurnddownChart.png "Full-semester Burndown Chart")
-
 ## 8. What We Learned
 
 ### What is OpenStack?
@@ -357,6 +355,8 @@ During this Sprint we also demonstrated our learnings on how a command is interp
 ### [Sprint 6](https://tree.taiga.io/project/amanbatra-cs6620-fall21-openstackclient/taskboard/sprint-6-15)
 
 It was at this stage of our work where most of our contribution was added into the OpenStack community as we were able to migrate 12 commands to OpenStackSDK and it was readily available in the master branch of OpenStack. We also learned how Functional Test cases were written in OpenStack and had successfully written one that went on to be merged in the master branch. As we enter the final days of our Project we focused on pushing out the open tasks and handing over the partial changes to our mentors which can later be migrated to OpenStackSDK. Additionally, we have successfully submitted our Project report and final presentations.
+
+![alt text](https://github.com/DiweiZhu/OpenStackClient-CS6620NEU21Fall/blob/main/BurnddownChart.png "Full-semester Burndown Chart")
 
 ### Gant Chart (Stories vs Sprint)
 <img width="1209" alt="gant-chart" src="https://user-images.githubusercontent.com/22731360/145174790-333dea0b-6c99-4d85-b32c-c6defe3817d7.png">
